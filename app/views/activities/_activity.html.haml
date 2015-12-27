@@ -1,0 +1,4 @@
+= link_to activity.name, activity
+= "(#{activity.focus})" if activity.focus && activity.focus != ''
+= "x#{activity.weight}" unless activity.weight == 1
+%br
