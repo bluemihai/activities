@@ -1,9 +1,8 @@
-%h2 All Activities
+.large-6.medium-6.small-12.columns
+  %h2 All Activities
+  = render @activities
 
-= render @activities
+.large-6.medium-6.small-12.columns
+  %h2 New Activity
+  = render 'form'
 
-%h2 New Activity
-
-= render 'form'
-
-= link_to 'Back', activities_path

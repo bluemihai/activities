@@ -5,6 +5,6 @@ class ApplicationController < ActionController::Base
   before_action :pick_activity
   
   def pick_activity
-    @chosen = Activity.all.sample
+    @chosen = Activity.sample_weighted
   end
 end
