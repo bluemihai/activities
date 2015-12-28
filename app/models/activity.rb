@@ -4,7 +4,10 @@ class Activity < ActiveRecord::Base
     weight || 1
   end
   
-  def self.get_random
-    Activity.all.sample
+  def full_name
+    output = name
+    output += " (#{focus})" if focus && focus != ''
+    output += " x#{weight}" if weight && weight != 1
+    output
   end
 end
